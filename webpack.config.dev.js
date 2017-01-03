@@ -9,8 +9,8 @@ module.exports = {
     context: path.resolve("./src"),
 
     entry: {
-        vendor: [  ],
-        nm: [  ]
+        vendor: [ "jquery" ],
+        nm: [ "./nm/index.js" ]
     },
 
     output: {
@@ -47,7 +47,7 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
 
         new webpack.ProvidePlugin({
-
+            $: "jquery"
         }),
 
         new webpack.optimize.CommonsChunkPlugin({
